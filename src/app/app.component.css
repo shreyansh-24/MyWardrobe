@@ -1,0 +1,191 @@
+/* css for the cards */
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #c0392b;
+    font-family: Raleway;
+    color: white;
+    letter-spacing: 1px;
+  }
+  
+  .card-form {
+    width: 500px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.05), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    
+  }
+  .card-form .form-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #27ae60;
+    border-radius: 10px 10px 0 0;
+    color:white !important;
+  }
+  .card-form .form-body {
+    padding: 10px;
+  }
+  .card-form .form-body .row {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .card-form .form-body .row input[type="text"] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 100%;
+    margin: 0 15px;
+    height: 35px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #e8ebed;
+    color: #576366;
+    font-size: 14px;
+  }
+  .card-form .rule {
+    height: 2px;
+    background: #e8ebed;
+    margin: 0px 35px;
+  }
+  .card-form .form-footer {
+    margin: 0 25px 15px 25px;
+    padding: 15px 10px;
+  }
+  .card-form .form-footer a {
+    display: inline-block;
+    height: 40px;
+    line-height: 33px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 23px;
+    background: #27ae60;
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .card-form .form-footer span {
+    margin-left: 8px;
+  }
+
+  /* css for the cards */
+
+  .head-top{
+      color: white;
+      padding: 10px 0px;
+      margin-bottom: 61px;
+  }
+
+  /* card for data display */
+
+  h2 {
+  text-align: center;
+}
+
+.col {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.price-box {
+  background: #fff;
+  color: #555;
+  list-style-type: none;
+  border: 1px solid #555;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.price-box:hover,
+.price-box.best {
+  box-shadow: 0 10px 15px 0 #000;
+}
+
+.price-box .header {
+  background-color: #111;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.price-box .header.header-green {
+  background-color: #58d68d;
+}
+
+.price-box li {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.price-box .emph {
+  background-color: #f4f4f4;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #58d68d;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .col {
+    width: 100%;
+  }
+}
+
+.panel-body ul{
+    list-style: none;
+    float: left;
+    padding-left: 5px !important;
+}
+.panel-default{
+  width: 91%;
+}
+.panel-default>.panel-heading {
+    color: white;
+    background-color: #27ae60;
+    border-color: #ddd;
+    text-align: center;
+}
+
+
+/* day's attire show css */
+
+table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  text-align: center !important;
+  font-weight: 700;
+}
+
+table[_ngcontent-c0] > tbody[_ngcontent-c0] > tr[_ngcontent-c0] > td[_ngcontent-c0], .table[_ngcontent-c0] > tbody[_ngcontent-c0] > tr[_ngcontent-c0] > th[_ngcontent-c0], .table[_ngcontent-c0] > tfoot[_ngcontent-c0] > tr[_ngcontent-c0] > td[_ngcontent-c0], .table[_ngcontent-c0] > tfoot[_ngcontent-c0] > tr[_ngcontent-c0] > th[_ngcontent-c0], .table[_ngcontent-c0] > thead[_ngcontent-c0] > tr[_ngcontent-c0] > td[_ngcontent-c0], .table[_ngcontent-c0] > thead[_ngcontent-c0] > tr[_ngcontent-c0] > th[_ngcontent-c0] {
+  text-align: center !important;
+  font-weight: 700;
+  font-size: 17px;
+  color: #27ae60;
+}
+
+.form-control{
+  color: #27ae60;
+}

@@ -1,3 +1,341 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid" style="background-color:#27ae60" class="text-center"><h2 class="head-top">Add Items to your Wardrobe</h2></div>
+<div class="container">
+  <div class="row" >
+    <!-- card -->
+ <div class="container">
+   <div class="row"> 
+     <div class="col-md-6">  
+    <div class="card-form">
+        <form class="signup">
+          <div class="form-title">Add Your Shirt Type</div>
+          <div class="form-body">
+            <div class="row">
+              <input type="text" [(ngModel)] = "s1.type" name="shirttype" placeholder="Enter Shirt*">
+              
+            </div>
+            
+          </div>
+          <div class="rule"></div>
+          <div class="form-footer">
+            <a (click) = "addShirt()">Save</a>
+            
+          </div>
+        </form>
+      </div>
+     </div>
+     <div class="col-md-6">
+        <div class="card-form">
+            <form class="signup">
+              <div class="form-title">Add Your Pant Type</div>
+              <div class="form-body">
+                <div class="row">
+                  <input type="text" [(ngModel)] = "s2.type" name="panttype" placeholder="Enter Pant*">
+                  
+                </div>
+                
+              </div>
+              <div class="rule"></div>
+              <div class="form-footer">
+                  <a (click) = "addPant()">Save</a>
+                
+              </div>
+            </form>
+          </div>
+     </div> 
+    </div>
+</div>     
+      <!-- card -->
+    
+  
+  </div>
+</div>
+
+  <div class="container-fluid" style="background-color:#27ae60;margin-top: 70px;" class="text-center"><h2 class="head-top">Here's your Wardrobe</h2></div>
+<!-- card for displaying data -->
+     
+  <!-- ============Row for displayng data============ -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3>Shirts You Have</h3></div>
+            <div class="panel-body"><ul *ngFor="let shirt of shirts">
+              <li><button type="button" class="btn btn-success">{{shirt.type}}</button></li>
+            </ul></div>
+          </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3>Pants You Have</h3></div>
+            <div class="panel-body"><ul *ngFor="let pant of pants">
+                <li><button type="button" class="btn btn-success">{{pant.type}}</button></li>
+              </ul></div>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Selecting what to wear on each day -->
+<div class="container-fluid" style="background-color:#27ae60;margin-top: 70px;" class="text-center"><h2 class="head-top">Choose Today's Attire</h2></div>
+<div class="container">
+  <div class="row">
+  
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th style="  background-color: #27ae60 !important;
+                color: white !important;"><h3>Day of the Week</h3></th>
+                <th style="  background-color: #27ae60 !important;
+                color: white !important;"><h3>Choose Shirt</h3></th>
+                <th style="  background-color: #27ae60 !important;
+                color: white !important;"><h3>Choose Pants</h3></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- =====Monday===== -->
+              <tr>
+                <td>Monday</td>
+                <td> <form>
+                    <div class="form-group">
+                      <!-- <label for="sel1">Select list (select one):</label> -->
+                      <select [(ngModel)] = "mondayshirt" name="mondayshirt" class="form-control" id="sel1">
+                        <option *ngFor="let shirt of shirts">{{shirt.type}}</option>
+                      </select>
+                   
+                      <br>
+                    </div>
+                  </form></td>
+                <td><form>
+                    <div class="form-group">
+                      <!-- <label for="sel1">Select list (select one):</label> -->
+                      <select [(ngModel)] = "mondaypant" name="mondaypant" class="form-control" id="sel1">
+                        <option *ngFor="let pant of pants">{{pant.type}}</option>
+                      </select>
+                      <br>
+                    </div>
+                  </form></td>
+              </tr>
+              <!-- ==Tuesday== -->
+              <tr>
+                  <td>Tuesday</td>
+                  <td> <form>
+                      <div class="form-group">
+                        <!-- <label for="sel1">Select list (select one):</label> -->
+                        <select [(ngModel)] = "tuesdayshirt" name="tuesdayshirt" class="form-control" id="sel1">
+                          <option *ngFor="let shirt of shirts">{{shirt.type}}</option>
+                        </select>
+                        <br>
+                      </div>
+                    </form></td>
+                  <td><form>
+                      <div class="form-group">
+                        <!-- <label for="sel1">Select list (select one):</label> -->
+                        <select [(ngModel)] = "tuesdaypant" name="tuesdaypant" class="form-control" id="sel1">
+                          <option *ngFor="let pant of pants">{{pant.type}}</option>
+                        </select>
+                        <br>
+                      </div>
+                    </form></td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td> <form>
+                        <div class="form-group">
+                          <!-- <label for="sel1">Select list (select one):</label> -->
+                          <select [(ngModel)] = "wednesdayshirt" name="wednesdayshirt" class="form-control" id="sel1">
+                            <option *ngFor="let shirt of shirts">{{shirt.type}}</option>
+                          </select>
+                          <br>
+                        </div>
+                      </form></td>
+                    <td><form>
+                        <div class="form-group">
+                          <!-- <label for="sel1">Select list (select one):</label> -->
+                          <select [(ngModel)] = "wednesdaypant" name="wednesdaypant" class="form-control" id="sel1">
+                            <option *ngFor="let pant of pants">{{pant.type}}</option>
+                          </select>
+                          <br>
+                        </div>
+                      </form></td>
+                  </tr>
+                  <tr>
+                      <td>Thursday</td>
+                      <td> <form>
+                          <div class="form-group">
+                            <!-- <label for="sel1">Select list (select one):</label> -->
+                            <select [(ngModel)] = "thursdayshirt" name="thursdayshirt" class="form-control" id="sel1">
+                              <option *ngFor="let shirt of shirts">{{shirt.type}}</option>
+                            </select>
+                            <br>
+                          </div>
+                        </form></td>
+                      <td><form>
+                          <div class="form-group">
+                            <!-- <label for="sel1">Select list (select one):</label> -->
+                            <select [(ngModel)] = "thursdaypant" name="thursdaypant" class="form-control" id="sel1">
+                              <option *ngFor="let pant of pants">{{pant.type}}</option>
+                            </select>
+                            <br>
+                          </div>
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td> <form>
+                            <div class="form-group">
+                              <!-- <label for="sel1">Select list (select one):</label> -->
+                              <select [(ngModel)] = "fridayshirt" name="fridayshirt" class="form-control" id="sel1">
+                                <option *ngFor="let shirt of shirts">{{shirt.type}}</option>
+                              </select>
+                              <br>
+                            </div>
+                          </form></td>
+                        <td><form>
+                            <div class="form-group">
+                              <!-- <label for="sel1">Select list (select one):</label> -->
+                              <select [(ngModel)] = "fridaypant" name="fridaypant" class="form-control" id="sel1">
+                                <option *ngFor="let pant of pants">{{pant.type}}</option>
+                              </select>
+                              <br>
+                            </div>
+                          </form></td>
+                      </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- Viewing What i wore on what day -->
+<div class="container-fluid" style="background-color:#27ae60;margin-top: 70px;" class="text-center"><h2 class="head-top">History Check!</h2></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card-form" style="width: 293px">
+        <form class="signup">
+          <div class="form-title">Monday's Attire</div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td>{{mondayshirt}}</td>
+               
+              </tr>
+              <tr>
+                <td>{{mondaypant}}</td>
+                
+              </tr>
+              
+            </tbody>
+          </table>
+          
+         
+        </form>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="card-form" style="width: 293px">
+          <form class="signup">
+            <div class="form-title">Tuesday's Attire</div>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td>{{tuesdayshirt}}</td>
+                 
+                </tr>
+                <tr>
+                  <td>{{tuesdaypant}}</td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+            
+           
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card-form" style="width: 293px">
+            <form class="signup">
+              <div class="form-title">Wednesday's Attire</div>
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td>{{wednesdayshirt}}</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>{{wednesdaypant}}</td>
+                    
+                  </tr>
+                  
+                </tbody>
+              </table>
+              
+             
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-form" style="width: 293px">
+              <form class="signup">
+                <div class="form-title">Thursday's Attire</div>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>{{thursdayshirt}}</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>{{thursdaypant}}</td>
+                      
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                
+               
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card-form" style="width: 293px">
+                <form class="signup">
+                  <div class="form-title">Friday's Attire</div>
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>{{fridayshirt}}</td>
+                       
+                      </tr>
+                      <tr>
+                        <td>{{fridaypant}}</td>
+                        
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  
+                 
+                </form>
+              </div>
+            </div>
+            
+    
+
+    
+  </div>
+</div>
+
+
+
+
+
+
